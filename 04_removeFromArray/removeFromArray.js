@@ -1,12 +1,13 @@
-const removeFromArray = function(array, ...values) {
-    // For each value...
-    let filteredArray = [];
+const removeFromArray = function (array, ...values) {
+    // For each value... 
     for (let value of values) {
         // Find the value(s) in array
         for (let i = 0; i < array.length; i++) {
             // Use splice() to remove it
-            if (value === array[i]) array = array.splice(i, 1);
-        } 
+            if (array[i] === value) { 
+                array.splice(i, 1); 
+            }
+        }
     }
     return array;
 };
